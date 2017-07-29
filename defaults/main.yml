@@ -1,0 +1,4 @@
+---
+update_alternatives_items:
+  - name: editor
+    path: /usr/bin/vim.basic

@@ -1,0 +1,6 @@
+---
+- name: Run update-alternatives
+  command: "/usr/sbin/update-alternatives --set {{ item.name }} {{ item.path }}"
+  with_items: "{{ update_alternatives_items }}"
+  register: command_result
+  changed_when: "command_result.stdout != ''"
